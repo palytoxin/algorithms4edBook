@@ -1,7 +1,10 @@
 package cheaper2;
 
 import java.io.IOException;
-import stdlib.*;;
+
+import stdlib.*;
+
+;
 
 public class Example {
 	public static void sort(Comparable[] a) {
@@ -25,7 +28,7 @@ public class Example {
 	}
 
 	public static boolean isSorted(Comparable[] a) {
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 1; i < a.length; i++) {
 			if (less(a[i], a[i - 1]))
 				return false;
 		}
@@ -33,9 +36,9 @@ public class Example {
 	}
 
 	public static void main(String[] args) throws IOException {
-		 String[] a = In.readStrings();
-		 sort(a);
-		 assert isSorted(a);
-		 show(a);
+		String[] a = StdIn.readAllStrings();
+		sort(a);
+		assert isSorted(a);
+		show(a);
 	}
 }
