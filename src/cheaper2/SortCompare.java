@@ -8,8 +8,9 @@ public class SortCompare {
 	@SuppressWarnings("rawtypes")
 	public static double time(String alg, Comparable[] a){
 		Stopwatch timer = new Stopwatch();
-		if (alg.equals('I')) Insertion.sort(a);
-		if (alg.equals("Se")) Selection.sort(a);
+		if (alg.equals("Insertion")) Insertion.sort(a);
+		if (alg.equals("Selection")) Selection.sort(a);
+		if (alg.equals("Shell")) Shell.sort(a);
 		return timer.elapsedTime();
 	}
 	public static double timeRandomInput(String alg, int N, int T){
@@ -25,16 +26,18 @@ public class SortCompare {
 	
 	public static void main(String[] args) {
 		String[] args1 = new String[4];
-		args1[0] = "I";
-		args1[1] = "Se";
-		args1[2] = "1000";
-		args1[3] = "5000";
+		args1[0] = "Selection";//"Insertion";
+		args1[1] = "Shell";
+		args1[2] = "10000";
+		args1[3] = "50";
 		String alg1 = args1[0];
 		String alg2 = args1[1];
 		int N = Integer.parseInt(args1[2]);
 		int T = Integer.parseInt(args1[3]);
 		double t1 = timeRandomInput(alg1, N, T);
+		System.out.println(args1[0]+":"+t1);
 		double t2 = timeRandomInput(alg2, N, T);
+		System.out.println(args1[1]+":"+t2);
 		StdOut.printf("For %d random Doubles\n  %s is", N, alg1);
 		StdOut.printf(" %.1f times faster than %s\n", t2/t1, alg2);
 	}
