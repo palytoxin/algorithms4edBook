@@ -1,6 +1,8 @@
-package cheaper2;
+package practice;
 
 import java.util.Random;
+
+import cheaper2.Example;
 
 @SuppressWarnings("rawtypes")
 public class Practice extends Example {

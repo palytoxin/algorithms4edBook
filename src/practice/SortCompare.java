@@ -1,5 +1,8 @@
-package cheaper2;
+package practice;
 
+import cheaper2.Insertion;
+import cheaper2.Selection;
+import cheaper2.Shell;
 import stdlib.StdOut;
 import stdlib.StdRandom;
 import stdlib.Stopwatch;
