@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import stdlib.*;
 
-;
-
 public class Example {
 	public static void sort(Comparable[] a) {
 	}
